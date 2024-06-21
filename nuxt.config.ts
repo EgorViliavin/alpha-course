@@ -4,31 +4,20 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
 
   // https://nuxt.com/modules
-  modules: [
-    '@nuxthub/core',
-    '@nuxt/eslint'
-  ],
+  modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxtjs/tailwindcss'],
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {},
-
-  // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
-  runtimeConfig: {
-    public: {
-      // Can be overridden by NUXT_PUBLIC_HELLO_TEXT environment variable
-      helloText: 'Hello from the Edge 👋'
-    }
-  },
 
   // https://eslint.nuxt.com
   eslint: {
     config: {
       stylistic: {
-        quotes: 'single'
-      }
-    }
+        quotes: 'single',
+      },
+    },
   },
 
   // https://devtools.nuxt.com
-  devtools: { enabled: true }
+  devtools: { enabled: true },
 })
