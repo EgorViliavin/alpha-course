@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import vk from './icons/vk.vue'
+import wa from './icons/wa.vue'
+import telegram from './icons/telegram.vue'
+import burger from './icons/burger.vue'
+import close from './icons/close.vue'
+
 const mobileMenuOpen = ref(false)
+
 const navigation = [
   { name: 'Главная', href: '#' },
   { name: 'О Курсе', href: '#' },
@@ -25,7 +32,7 @@ const navigation = [
             <span class="sr-only">Your Company</span>
             <img
               class="h-20 w-20"
-              src="/assets/icons/img/pngegg.png"
+              src="/assets/img/pngegg.png"
               alt="Лого альфа курс"
             >
           </a>
@@ -37,10 +44,7 @@ const navigation = [
             @click="mobileMenuOpen = true"
           >
             <span class="sr-only">Open main menu</span>
-            <nuxt-icon
-              name="burger"
-              filled
-            />
+            <burger class="hover:text-orange-600 transition-colors" />
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
@@ -48,21 +52,21 @@ const navigation = [
             v-for="item in navigation"
             :key="item.name"
             :href="item.href"
-            class="text-sm leading-6 text-white hover:text-orange-600 transition-all uppercase"
+            class="text-sm leading-6 text-white hover:text-orange-600 transition-colors uppercase"
           >{{ item.name }}</a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-3">
           <a
             href="#"
-            class="text-sm leading-6 text-gray-900"
-          ><nuxt-icon name="vk" /></a>
+            class="text-sm leading-6 text-white"
+          ><vk class="hover:text-orange-600 transition-colors" /></a>
           <a
             href="#"
-            class="text-sm leading-6 text-gray-900"
-          ><nuxt-icon name="telegram" /></a><a
+            class="text-sm leading-6 text-white"
+          ><telegram class="hover:text-orange-600 transition-colors" /></a><a
             href="#"
-            class="text-sm leading-6 text-gray-900"
-          ><nuxt-icon name="wa" /></a>
+            class="text-sm leading-6 text-white"
+          ><wa class="hover:text-orange-600 transition-colors" /></a>
         </div>
       </nav>
       <Dialog
@@ -82,7 +86,7 @@ const navigation = [
               <span class="sr-only">Your Company</span>
               <img
                 class="w-auto h-16"
-                src="/assets/icons/img/pngegg.png"
+                src="/assets/img/pngegg.png"
                 alt="Альфа курс лого"
               >
             </a>
@@ -92,7 +96,7 @@ const navigation = [
               @click="mobileMenuOpen = false"
             >
               <span class="sr-only">Close menu</span>
-              <nuxt-icon name="close" />
+              <close class="hover:text-orange-600 transition-colors" />
             </button>
           </div>
           <div class="mt-6 flow-root">
@@ -102,22 +106,22 @@ const navigation = [
                   v-for="item in navigation"
                   :key="item.name"
                   :href="item.href"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase hover:text-orange-600 transition-all"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase hover:text-orange-600 transition-colors"
                 >{{ item.name }}</a>
               </div>
-              <div class="py-6 flex mobile">
+              <div class="py-6 flex mobile gap-4">
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                ><nuxt-icon name="vk" /></a>
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900"
+                ><vk /></a>
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                ><nuxt-icon name="telegram" /></a>
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900"
+                ><telegram /></a>
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                ><nuxt-icon name="wa" /></a>
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base"
+                ><wa /></a>
               </div>
             </div>
           </div>
@@ -127,23 +131,4 @@ const navigation = [
   </div>
 </template>
 
-<style>
-	.nuxt-icon svg {
-		width: 3em;
-		height: 2em;
-		margin-bottom: 0.125em;
-		vertical-align: middle;
-		color: white;
-	}
-	.nuxt-icon svg:hover {
-		color: #ea580c;
-	}
-	@media (max-width: 1020px) {
-		.mobile .nuxt-icon svg {
-			color: #000;
-		}
-		.mob-button .nuxt-icon svg {
-			color: #000;
-		}
-	}
-</style>
+<style></style>
