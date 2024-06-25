@@ -4,7 +4,12 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
 
   // https://nuxt.com/modules
-  modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxthub/core',
+    '@nuxt/eslint',
+    '@nuxtjs/tailwindcss',
+    'nuxt-icons',
+  ],
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {},
