@@ -29,7 +29,7 @@ const navigation = [
             href="#"
             class="-m-1.5 p-1.5"
           >
-            <span class="sr-only">Your Company</span>
+            <span class="sr-only">Альфа Курс</span>
             <img
               class="h-20 w-20"
               src="/assets/img/pngegg.png"
@@ -44,7 +44,7 @@ const navigation = [
             @click="mobileMenuOpen = true"
           >
             <span class="sr-only">Open main menu</span>
-            <burger class="hover:text-orange-600 transition-colors" />
+            <burger class="hover:text-[#f00] transition" />
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
@@ -52,21 +52,21 @@ const navigation = [
             v-for="item in navigation"
             :key="item.name"
             :href="item.href"
-            class="text-sm leading-6 text-white hover:text-orange-600 transition-colors uppercase"
+            class="text-sm leading-6 text-white hover:text-[#f00] transition-colors uppercase"
           >{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-3">
           <a
             href="#"
             class="text-sm leading-6 text-white"
-          ><vk class="hover:text-orange-600 transition-colors" /></a>
+          ><vk class="hover:text-[#f00] transition-colors" /></a>
           <a
             href="#"
             class="text-sm leading-6 text-white"
-          ><telegram class="hover:text-orange-600 transition-colors" /></a><a
+          ><telegram class="hover:text-[#f00] transition-colors" /></a><a
             href="#"
             class="text-sm leading-6 text-white"
-          ><wa class="hover:text-orange-600 transition-colors" /></a>
+          ><wa class="hover:text-[#f00] transition-colors" /></a>
         </div>
       </nav>
       <Dialog
@@ -96,7 +96,7 @@ const navigation = [
               @click="mobileMenuOpen = false"
             >
               <span class="sr-only">Close menu</span>
-              <close class="hover:text-orange-600 transition-colors" />
+              <close class="hover:text-[#f00] transition-colors" />
             </button>
           </div>
           <div class="mt-6 flow-root">
@@ -106,7 +106,7 @@ const navigation = [
                   v-for="item in navigation"
                   :key="item.name"
                   :href="item.href"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase hover:text-orange-600 transition-colors"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 uppercase hover:text-[#f00] transition-colors"
                 >{{ item.name }}</a>
               </div>
               <div class="py-6 flex mobile gap-4">
