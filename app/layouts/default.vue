@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <HeaderView />
-    <slot />
-  </div>
+	<div>
+		<HeaderView />
+		<slot />
+		<FooterView />
+	</div>
 </template>
