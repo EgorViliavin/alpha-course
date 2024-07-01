@@ -191,7 +191,7 @@
 		</section>
 		<section class="mx-auto max-w-screen-xl py-14">
 			<div class="flex justify-center items-center flex-col">
-				<h3 class="text-4xl text-center pb-10">
+				<h3 class="text-2xl md:text-3xl text-center pb-10">
 					Присоединяйтесь к нам!<br />
 					Регистрация занимает всего пару минут.
 				</h3>
